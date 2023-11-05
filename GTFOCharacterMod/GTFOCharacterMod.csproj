@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>GTFOCharacterMod</AssemblyName>
+    <Description>A mod to add a small change to each character that represents them in the lore</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+      https://nuget.samboy.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <RootNamespace>GTFOCharacterMod</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Modules-ASM">
+      <HintPath>/deps/Modules-ASM.dll</HintPath>
+    </Reference>
+    <Reference Include="GTFO-API">
+      <HintPath>/deps/GTFO-API.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>/deps/Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>/deps/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="SNet_ASM">
+      <HintPath>/deps/SNet_ASM.dll</HintPath>
+    </Reference>
+    <Reference Include="GlobalFramework-ASM">
+      <HintPath>/deps/GlobalFramework-ASM.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
